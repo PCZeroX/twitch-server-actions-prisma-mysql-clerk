@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 
+import { Toaster } from "sonner";
 import dynamic from "next/dynamic";
 import { dark } from "@clerk/themes";
 import { Inter } from "next/font/google";
@@ -41,7 +42,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             forcedTheme="dark"
             storageKey="gamehub-theme"
           >
-            {/* <Toaster theme="light" position="bottom-center" /> */}
+            <Toaster theme="light" position="bottom-center" />
             {children}
           </ThemeProvider>
         </body>
