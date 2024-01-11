@@ -68,7 +68,7 @@ export const LiveVideo = ({ participant }: LiveVideoProps) => {
   return (
     <div ref={wrapperRef} className="relative h-full flex">
       {/* <video ref={videoRef} width="100%" /> */}
-      <video ref={videoRef} width="100%">
+      <video ref={videoRef} width="100%" autoPlay>
         <track kind="captions" src="" />
       </video>
       <div className="absolute top-0 h-full w-full opacity-0 hover:opacity-100 hover:transition-all">
