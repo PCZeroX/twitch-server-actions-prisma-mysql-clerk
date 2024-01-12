@@ -1,12 +1,13 @@
+import { Suspense } from "react";
+
+import { Results, ResultsSkeleton } from "./_components/results";
+
 const HomePage = () => {
   return (
-    <div className="px-2 lg:px-4">
-      <p>Homepage</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae enim at
-        nemo saepe harum ipsam corrupti dolor, quo repellat est unde vero,
-        recusandae explicabo consequatur corporis asperiores quos cumque nulla!
-      </p>
+    <div className="h-full p-8 max-w-screen-2xl mx-auto">
+      <Suspense fallback={<ResultsSkeleton />}>
+        <Results />
+      </Suspense>
     </div>
   );
 };
